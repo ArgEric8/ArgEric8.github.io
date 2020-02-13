@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Registrerade</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/styles.css">
+    </head>
+    <body>
+        <section class="mainSection">
+            <h1>Registrerade uppgifter:</h1>
+            <ul>
+                <li><strong>Betalsätt:</strong> {{ form.payment }}</li>
+                <li><strong>Förnamn:</strong> {{ form.fnamn }}</li>
+                <li><strong>Efternamn:</strong> {{ form.enamn }}</li>
+                <li><strong>Adress:</strong> {{ form.adress }}</li>
+                <li><strong>Postnummer:</strong> {{ form.postnummer }}</li>
+                <li><strong>Ort:</strong> {{ form.ort }}</li>
+                <li><strong>Mobil:</strong> {{ form.mobil }}</li>
+                <li><strong>E-post:</strong> {{ form.epost }}</li>
+                <li><strong>Lösenord:</strong> {{ form.lösenord }}</li>
+                <li><strong>Erbjudanden:</strong> {{ form.erbjudanden }}</li>
+                <li><strong>E-postformat:</strong> {{ form.epostformat }}</li>
+                <li><strong>Kommentar:</strong><br> <textarea rows="5" cols="40">{{ form.kommentar }}</textarea></li>
+            </ul>
+            <h1>For loop</h1>
+            {% for key, value in form.items() %}
+                <li><strong>{{ key }}:</strong> {{ value }}</li>
+            {% endfor %}
+        </section>
+    </body>
+</html>

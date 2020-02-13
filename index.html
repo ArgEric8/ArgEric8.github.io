@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/styles.css">
+    </head>
+    <body>
+        <section class="mainSection">
+            <h1>Registrera</h1>
+<form name="minform" method="POST" action="{{url_for('Register')}}">
+* = obligatorisk
+<select name="payment">
+    <option value="" selected disabled hidden>Välj betalsätt</option>
+    <option value="Swish">Swish</option>
+    <option value="Paypal">Paypal</option>
+</select>*
+Förnamn:
+<input type="text" name="fnamn" required>*
+Efternamn:
+<input type="text" name="enamn" required>*
+Adress:
+<input type="text" name="adress" required>*
+Postnummer och ort:
+<input type="text" name="postnummer" required>* <input type="text" name="ort" required>*
+Mobil:
+<input type="tel" name="mobil" pattern="[0-9]{10}" required>*
+E-post:
+<input type="email" name="epost" required>*
+Lösenord:
+<input type="password" name="lösenord" required>*
+Erbjudanden via e-post:
+<input type="checkbox" name="erbjudanden">
+E-postformat:
+<input type="radio" name="epostformat" value="HTML">HTML<input type="radio" name="epostformat" value="Text">Text
+Kommentar:
+<textarea rows="5" cols="40" name="kommentar"></textarea>
+<input type="submit" value="Skicka">
+</form>
+        </section>
+    </body>
+</html>
